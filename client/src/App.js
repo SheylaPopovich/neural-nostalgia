@@ -1,20 +1,21 @@
 import "./App.css";
-import Dashboard from "../src/components/Dashboard/Dashboard";
-import Preferences from "../src/components/Preferences/Preferences";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Route, Router, Switch } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <div className="wrapper">
         <h1>Application</h1>
-        <BrowserRouter>
+        
+        <Router>
+        <>
           <Switch>
-            <Route path="/dashboard">
-              <Dashboard />
-            </Route>
+            <Route path="/dashboard" component={Dashboard} />
+            
+        
           </Switch>
-        </BrowserRouter>
+          </>
+        </Router>
       </div>
     </div>
   );
