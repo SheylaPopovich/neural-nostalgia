@@ -9,6 +9,11 @@ import {
 import LoginForm from "../src/pages/LoginForm";
 
 
+const httpLink = createHttpLink({
+  uri: "/graphql",
+});
+
+
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
@@ -17,7 +22,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider>
+    <ApolloProvider client={client}>
       <Router>
         <>
           <Routes>
