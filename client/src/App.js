@@ -1,6 +1,6 @@
 import './App.css';
 import Dashboard from "../src/components/Dashboard/Dashboard";
-
+import Preferences from "../src/components/Preferences/Preferences";
 
 function App() {
   return (
