@@ -6,22 +6,19 @@ import {
   ApolloProvider,
   createHttpLink,
 } from "@apollo/client";
+import LoginForm from "../src/pages/LoginForm";
 
 function App() {
   return (
-    <div className="App">
-      <div className="wrapper">
-        <h1>Application</h1>
-
-        <Router>
-          <>
-            <Switch>
-              <Route path="/dashboard" component={Dashboard} />
-            </Switch>
-          </>
-        </Router>
-      </div>
-    </div>
+    <ApolloProvider>
+      <Router>
+        <>
+          <Switch>
+            <Route exact path="/login" component={LoginForm} />
+          </Switch>
+        </>
+      </Router>
+    </ApolloProvider>
   );
 }
 
