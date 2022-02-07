@@ -54,3 +54,5 @@ class AuthService {
     return isAuth;
   }
 }
+
+export default new AuthService();
