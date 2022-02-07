@@ -14,5 +14,8 @@ import Profile from "./pages/Profile";
    </>
    );
  }
+ else {
+    return <Redirect to="/login" />;
+  }
 }
  
