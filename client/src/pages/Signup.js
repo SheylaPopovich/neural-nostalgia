@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useMutation } from '@apollo/client';
 import {ADD_USER} from "../utils/mutations";
+import Auth from '../utils/auth';
 
 function Copyright(props) {
   return (
@@ -31,15 +32,24 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+   
+    const userData = {
+        username: data.get("username"),
+        email: data.get("email"),
+        password: data.get("password"),
+    };
+
+    try {
+        const { data } = await addUser({ variables: { ...userData } });
+        Auth.login(data.addUser.token);
+      } catch (error) {
+        console.error(error);
+        setErrorMessage("Please enter a valid username, email, or password");
+      }
+    };
 
   return (
     <ThemeProvider theme={theme}>
