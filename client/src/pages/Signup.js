@@ -135,6 +135,11 @@ export default function SignUp() {
                 </Link>
               </Grid>
             </Grid>
+            {errorMessage && (
+                <div>
+                  <h4>{errorMessage}</h4>
+                </div>
+              )}
           </Box>
         </Box>
         <Copyright sx={{ mt: 5 }} />
