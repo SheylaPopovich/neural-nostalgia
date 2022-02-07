@@ -36,19 +36,24 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function LoginForm() {
-  const [loginUser] = useMutation(LOGIN_USER)
+  const [loginUser] = useMutation(LOGIN_USER);
 
-
-
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
+
+    const userData = {
       email: data.get("email"),
       password: data.get("password"),
-    });
+    };
+
+    try {
+      const { data } = await loginUser({ variables: { ...userData } });
+      Auth.login(data.login.token);
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("Please enter a valid email or password");
+    }
   };
 
   return (
