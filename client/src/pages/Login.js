@@ -14,6 +14,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
+import Auth from "../utils/auth"
 
 function Copyright(props) {
   return (
@@ -125,6 +126,11 @@ export default function LoginForm() {
                 </Link>
               </Grid>
             </Grid>
+            {errorMessage && (
+              <div>
+<h4>{errorMessage}</h4>
+              </div>
+            )}
           </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />
