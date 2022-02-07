@@ -1,0 +1,19 @@
+{
+  "name": "neural-nostalgia",
+  "version": "1.0.0",
+  "description": "Why Does Music Evoke Memories? The relationship between music and memory is powerful. Music evokes powerful emotions that then bring back memories. When we listen to a piece of music from years ago, we seem to travel back to that moment. We can feel everything as if we were there. Now you can capture that moment with this application, let the nostalgia begin!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SheylaPopovich/neural-nostalgia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SheylaPopovich/neural-nostalgia/issues"
+  },
+  "homepage": "https://github.com/SheylaPopovich/neural-nostalgia#readme"
+}
