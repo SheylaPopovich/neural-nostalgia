@@ -44,7 +44,7 @@ class AuthService {
     window.location.assign("/");
   }
 
-  isAllowedToView(currentUserId) {
+  isAllowedToView(userAlbum, currentUserId) {
     let isAuth = false;
     userAlbum.forEach((user) => {
       if (currentUserId === user._id) {
