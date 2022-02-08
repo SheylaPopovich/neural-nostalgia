@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route, Navigate } from "react-router-dom";
 import Auth from "./utils/auth";
 
 import Profile from "./pages/Profile";
@@ -15,7 +15,7 @@ import Profile from "./pages/Profile";
    );
  }
  else {
-    return <Redirect to="/login" />;
+    return <Navigate to="/login" />;
   }
 }
  
