@@ -1,7 +1,7 @@
 const { AuthenticationError } = require("apollo-server-errors");
 const { User } = require("../models");
 const { signToken } = require("../utils/auth");
-const { Types } = require("mongoose");
+// const { Types } = require("mongoose");
 
 
 const resolvers = {

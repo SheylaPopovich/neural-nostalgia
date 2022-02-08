@@ -9,9 +9,11 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import LoginForm from "./pages/Login";
 import SignUp from "./pages/Signup";
+import PrivateRoute from "../src/PrivateRoutes";
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri:'/graphql',
+  credentials: 'include'
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -38,6 +40,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<LoginForm />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route exact path="*" component={PrivateRoute} />
           </Routes>
         </>
       </Router>
