@@ -13,7 +13,6 @@ import PrivateRoute from "../src/PrivateRoutes";
 
 const httpLink = createHttpLink({
   uri:'/graphql',
-  credentials: 'include'
 });
 
 const authLink = setContext((_, { headers }) => {
