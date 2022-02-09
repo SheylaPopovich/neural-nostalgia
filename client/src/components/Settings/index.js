@@ -14,4 +14,5 @@ export default function Settings({ users, projectId }) {
   const { data } = useQuery(GET_ALL_USERS);
   const userData = data?.users || [];
 
-  
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
