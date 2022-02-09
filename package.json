@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/SheylaPopovich/neural-nostalgia/issues"
   },
-  "homepage": "https://github.com/SheylaPopovich/neural-nostalgia#readme"
+  "homepage": "https://github.com/SheylaPopovich/neural-nostalgia#readme",
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  }
 }

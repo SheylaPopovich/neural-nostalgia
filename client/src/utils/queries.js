@@ -10,11 +10,3 @@ export const GET_ME = gql`
   }
 `;
 
-export const GET_ALL_USERS = gql`
-  query {
-    users {
-      _id
-      username
-    }
-  }
-`;
