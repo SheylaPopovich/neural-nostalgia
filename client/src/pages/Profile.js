@@ -7,7 +7,7 @@ import Auth from "../utils/auth";
 import { GET_ME } from "../utils/queries";
 
 export default function Profile() {
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage] = useState("");
 
   // Gets the current users data
   const { loading, data } = useQuery(GET_ME);

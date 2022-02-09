@@ -58,7 +58,6 @@ export default function SignUp() {
       console.error(error);
       setErrorMessage("Please enter a valid username, email, or password");
     }
-    
   };
 
   return (
@@ -147,8 +146,8 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-              <Link href="/login" variant="body2">
-                    {"Already have and account? Login"}
+                <Link href="/" variant="body2">
+                  Already have an account? Sign in
                 </Link>
               </Grid>
             </Grid>
