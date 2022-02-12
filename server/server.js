@@ -30,3 +30,12 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "../client/build/index.html"));
   });
   
+
+  
+db.once("open", () => {
+    app.listen(PORT, () => {
+      console.log(`API server running on port ${PORT}!`);
+      console.log(`Use  at http://localhost:${PORT}${server.graphqlPath}`);
+    });
+  });
+  
