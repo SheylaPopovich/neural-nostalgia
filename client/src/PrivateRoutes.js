@@ -9,8 +9,7 @@ import Profile from "./pages/Profile";
     if (Auth.loggedIn()) {
    return (
    <>
-   <Route exact path="/" component={Profile} />
-   
+   <Route exact path="/" element={<Profile />} />  
    </>
    );
  }
