@@ -39,7 +39,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<LoginForm />} />
             <Route path="/signup" element={<SignUp />} />
-            <Route exact path="*" component={PrivateRoute} />
+            <Route exact path="*" component={<PrivateRoute />} />
           </Routes>
         </>
       </Router>
