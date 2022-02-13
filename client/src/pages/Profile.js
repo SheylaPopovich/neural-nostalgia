@@ -6,6 +6,8 @@ import { useQuery } from "@apollo/client";
 import Auth from "../utils/auth";
 import { GET_ME } from "../utils/queries";
 
+
+
 export default function Profile() {
   const [errorMessage] = useState("");
 
@@ -14,16 +16,17 @@ export default function Profile() {
   const userData = data?.me || [];
 
   // When the form is submitted, takes data to pass into the mutation
-  // const handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget);
-  // };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    // const data = new FormData(event.currentTarget);
+  };
 
   // If the user data hasn't been returned yet return loading
   if (loading) {
     return <h2>LOADING...</h2>;
   }
-  return (<div>
+  return (
+  <div>
       <h1>
           {userData.username}
           </h1>
